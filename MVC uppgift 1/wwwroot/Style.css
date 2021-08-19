@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.tooltip{
+
+}
+
+.tooltipText{
+    visibility:hidden;
+   
+}
+
+.tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgoldenrodyellow;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    left: 200px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
+#footer{
+    position:absolute;
+    bottom:0;
+}
+
+.about{
+    width:40%;
+}

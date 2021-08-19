@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Style.css">
+</head>
+<body>
+    @Html.ActionLink("Om", "About", "Home")
+    @Html.ActionLink("Kontakt", "Contact", "Home")
+    @Html.ActionLink("Projekt", "Projects", "Home")
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer"> @DateTime.Now.Date Magnus Larsson</div>
+   
+</body>
+</html>
