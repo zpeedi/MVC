@@ -5,8 +5,4 @@
     <RootNamespace>MVC_uppgift_1</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>

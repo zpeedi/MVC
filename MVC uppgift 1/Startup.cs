@@ -17,6 +17,10 @@ namespace MVC_uppgift_1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSession(o =>
+            {
+                o.IdleTimeout = TimeSpan.FromSeconds(1800);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,8 +32,21 @@ namespace MVC_uppgift_1
             }
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseSession();
+
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                   name: "GuessingGame",
+                   pattern: "GuessingGame",
+                   defaults: new { controller = "GuessingGame", action = "GuessingGame" });
+
+                endpoints.MapControllerRoute(
+                    name: "FeverCheck",
+                    pattern: "FeverCheck",
+                    defaults: new { controller = "Doctor", action = "FeverCheck" });
+                
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=About}/{id?}"
